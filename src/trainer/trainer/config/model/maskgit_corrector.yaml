@@ -1,0 +1,4 @@
+_target_: trainer.corrector.maskgit_corrector.MaskGitLayoutCorrector
+_partial_: true
+attr_loss_weights: [1., 1., 1., 1., 1.]
+loss_type: bce

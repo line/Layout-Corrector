@@ -1,0 +1,4 @@
+_target_: trainer.datasets.crello_bbox.CrelloBboxDataset
+_partial_: true
+dir: /build/download/datasets
+max_seq_length: 25

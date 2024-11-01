@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - override /model: maskgit
+
+data:
+  bbox_quantization: kmeans
+model:
+  use_padding_as_vocab: true

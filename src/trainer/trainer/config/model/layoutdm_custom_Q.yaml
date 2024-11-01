@@ -1,0 +1,9 @@
+_target_: trainer.models.layoutdm.LayoutDM
+_partial_: true
+att_1: 0.99999
+att_T: 0.000009
+ctt_1: 0.000009
+ctt_T: 0.99999
+training_condition: null
+use_padding_as_vocab: true
+auxiliary_loss_weight: 0.1

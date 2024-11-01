@@ -1,0 +1,4 @@
+# used in LayoutDiffusion (ICCV2023)
+_target_: trainer.models.transformer_utils.BertEncoder
+config_name: bert-base-uncased
+hidden_dropout_prob: 0.1

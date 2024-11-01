@@ -1,0 +1,32 @@
+# For ablation study
+# @package _global_
+defaults:
+  - override /model: layout_corrector
+  - override /scheduler: reduce_lr_on_plateau
+
+data:
+  pad_until_max: true
+  shared_bbox_vocab: x-y-w-h
+  bbox_quantization: kmeans
+optimizer:
+  lr: 5.0e-4
+backbone:
+  encoder_layer:
+    _target_: trainer.models.transformer_utils.MlpBlock # <== Block w/o self-attention
+    timestep_type: adalayernorm
+    diffusion_step: 100
+    dropout: 0.0
+  num_layers: 4
+model:
+  shrink_ratio: 1.0 # <== no-shrink to keep the same num_params
+  pos_emb: none
+  use_padding_as_vocab: true
+  num_timesteps: 100
+  time_adaptive_global_loss: false
+  loss_type: bce
+  target: recon_acc
+  recon_type: x_t-1
+  transformer_type: aggregated
+sampling: 
+  name: random
+dm_job_dir: ??? # pretrained diffusion model

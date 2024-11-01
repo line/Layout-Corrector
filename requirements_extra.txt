@@ -1,0 +1,3 @@
+# The following packages need to be installed after finishing the installation of torch
+torch-scatter==2.1.2
+torch-sparse==0.6.18

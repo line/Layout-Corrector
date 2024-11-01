@@ -1,0 +1,6 @@
+_target_: trainer.models.layout_diffusion.LayoutDiffusion
+_partial_: true
+training_condition: null
+use_padding_as_vocab: false
+auxiliary_loss_weight: 0.1
+pos_emb_length: null

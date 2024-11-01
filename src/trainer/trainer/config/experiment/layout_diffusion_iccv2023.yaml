@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - override /model: layout_diffusion
+  - override /scheduler: linear_lr
+  - override /backbone: bert_base
+
+data:
+  pad_until_max: true
+  shared_bbox_vocab: ltrb
+  bbox_quantization: linear
+  var_order: "c-l-t-r-b"
+  num_bin_bboxes: 128
+  transforms: ["LexicographicOrder"]
+optimizer:
+  lr: 4.0e-5
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+model:
+  num_timesteps: 200
+  transformer_type: layout_diffusion
+  auxiliary_loss_weight: 0.001
+  adaptive_auxiliary_loss: true
+training:
+  weight_decay: 0.0
+  grad_norm_clip: -1.0 # no clipping
+  epochs: 320
+scheduler:
+  total_iters: 320

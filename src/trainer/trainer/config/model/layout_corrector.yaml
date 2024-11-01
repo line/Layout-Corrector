@@ -1,0 +1,6 @@
+_target_: trainer.corrector.layout_corrector.LayoutCorrector
+_partial_: true
+attr_loss_weights: [1., 1., 1., 1., 1.]
+loss_type: bce
+recon_type: x_t-1
+use_padding_as_vocab: true

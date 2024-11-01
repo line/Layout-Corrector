@@ -1,0 +1,22 @@
+
+# @package _global_
+defaults:
+  - override /model: maskgit_corrector
+  - override /scheduler: reduce_lr_on_plateau
+
+optimizer:
+  lr: 5.0e-4
+backbone:
+  encoder_layer:
+    timestep_type: adalayernorm_mlp
+    dropout: 0.0
+model:
+  shrink_ratio: 0.84375 # =27/32, 
+  pos_emb: none
+  use_padding_as_vocab: true
+  loss_type: bce
+  target: recon_acc
+  transformer_type: aggregated
+sampling: 
+  name: random
+dm_job_dir: ??? # pretrained diffusion model

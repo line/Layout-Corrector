@@ -1,0 +1,3 @@
+_target_: trainer.models.elem_wise_autoreg.ElemWiseAutoreg
+_partial_: true
+training_condition: null  # not supported, it's for compatibility with LayoutDM

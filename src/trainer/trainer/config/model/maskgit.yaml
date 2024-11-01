@@ -1,0 +1,4 @@
+_target_: trainer.models.maskgit.MaskGIT
+_partial_: true
+training_condition: null  # not supported, it's for compatibility with LayoutDM
+use_padding_as_vocab: false
